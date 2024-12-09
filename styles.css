@@ -2,7 +2,7 @@
 
 :root {
   --navy-blue: #14213D;
-  --light-blue: #00a6ff;
+  --yellow: #FCA311;
   --light-gray: #E5E5E5;
   --white: #FFFFFF;
   --black: #000000;
@@ -31,7 +31,7 @@
 
 .floating-resume-btn:hover {
     transform: translateY(-5px) rotate(360deg);
-    background-color: var(--light-blue);
+    background-color: var(--yellow);
     color: var(--navy-blue);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
@@ -78,7 +78,7 @@
         }
 
         .resume-preview-toggle-label:hover {
-            background-color: var(--light-blue);
+            background-color: var(--yellow);
             color: var(--navy-blue);
         }
 
@@ -151,7 +151,7 @@ header h1 {
 .skills {
   display: block;
   margin-top: 10px;
-  color: var(--light-blue);
+  color: var(--yellow);
 }
 
 .social-links {
@@ -162,7 +162,7 @@ header h1 {
 }
 
 .btn-social {
-  color: var(--light-blue);
+  color: var(--yellow);
   font-size: 2rem;
   text-decoration: none;
   transition: all 0.3s ease;
