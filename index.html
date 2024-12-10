@@ -1,13 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ofek Harpaz - DevOps Engineer</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dor Keret - DevOps Engineer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Dor Keret</h1>
+            <span class="skills">DevOps Engineer | AWS SAA Certified</span>
+            <div class="social-links mt-4">
+                <a href="https://github.com/keretdodor" class="btn-social btn-outline">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/dorkeret" class="btn-social btn-outline">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:keret.dor@gmail.com" class="btn-social btn-outline">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>Thanks for checking out my portfolio! I'm based in Israel, and apart from my passion for technology, I enjoy cooking, sculpting, and staying engaged in politics.</p>
+                <p>I genuinely believe I can tackle any challenge and quickly adapt to new tools and technologies. One of my favorite things to do is learn new things whether it's exploring the latest in DevOps or diving into other areas of life.</p>
+                <p>With a deep love for Kubernetes and cloud, I truly appreciate you taking the time to read this section. Feel free to explore my projects—I'd love to hear your thoughts!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <!-- Polybot Project -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Polybot: AI-Powered Telegram Bot Deployed with AWS</h3>
+                        <div class="project-description">
+                            <p style="margin-bottom: 10px;">The Polybot Project is a Telegram bot built with Python and integrated with a REST API utilizing the YOLOv5 AI model for image analysis.</p>
+                            <ul>
+                                <li>Deployed on AWS using Terraform modules for scalability and fault tolerance across multiple Availability Zones.</li>
+                                <li>Telegram bot integrates with AWS services like S3, SQS, and DynamoDB to handle image uploads, analysis, and results.</li>
+                                <li>Dockerized infrastructure with Polybot and YOLOv5 instances.</li>
+                                <li>CI/CD pipelines automate infrastructure provisioning and application deployment.</li>
+                            </ul>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag"><i class="fab fa-python"></i> Python</span>
+                            <span class="tech-tag"><i class="fab fa-aws"></i> AWS</span>
+                            <span class="tech-tag"><i class="fas fa-code-branch"></i> Terraform</span>
+                            <span class="tech-tag"><i class="fab fa-docker"></i> Docker</span>
+                            <span class="tech-tag"><i class="fab fa-github"></i> Github Actions</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/keretdodor/polybot-infra" target="_blank">
+                                <i class="fab fa-github"></i> Infrastructure Repository
+                            </a>
+                            <a href="https://github.com/keretdodor/polybot" target="_blank">
+                                <i class="fab fa-github"></i> Polybot Repository
+                            </a>
+                            <a href="https://github.com/keretdodor/YOLOv5" target="_blank">
+                                <i class="fab fa-github"></i> YOLOv5 Repository
+                            </a>
+                        </div>
+                    </div>
+                    <img src="/images/archi/polybot-infra.png" alt="Polybot Architecture" class="project-image">
+                </div>
+
+                <!-- GCP MongoDB & GKE Project -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>GCP MongoDB & GKE</h3>
+                        <div class="project-description">
+                            <p style="margin-bottom: 10px;">This project deploys a highly available and fault-tolerant architecture on GCP using Terraform. It provisions a secure environment featuring a MongoDB replica set and a GKE cluster, each hosted on private subnets within a shared VPC.</p>
+                            <ul>
+                                <li>Secure Architecture: Private subnets for MongoDB and GKE, with public access via Bastion Host.</li>
+                                <li>Scalability: Horizontal Pod Autoscaler and spot node pools ensure cost-effective scaling.</li>
+                                <li>Automation: Modularized Terraform code for efficient and reusable infrastructure provisioning.</li>
+                                <li>Enhanced Access: TLS-based ingress and Identity-Aware Proxy (IAP) for secure application and Argo CD integration.</li>
+                            </ul>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag"><i class="fab fa-google"></i> GCP</span>
+                            <span class="tech-tag"><i class="fas fa-dharmachakra"></i> Kubernetes</span>
+                            <span class="tech-tag"><i class="fas fa-database"></i> MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/keretdodor/gcp-project-infra" target="_blank">
+                                <i class="fab fa-github"></i> The Repository
+                            </a>
+                        </div>
+                    </div>
+                    <img src="/images/archi/mongo.png" alt="GCP Project Architecture" class="project-image">
+                </div>
+
+                <!-- Video Streaming Service Project -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Video Streaming Service Project</h3>
+                        <div class="project-description">
+                            <p style="margin-bottom: 10px;">Developed and deployed a Netflix-style microservices application using Docker, Kubernetes, Jenkins, and ArgoCD. The project involved containerizing microservices, setting up a CI/CD pipeline for automated deployments, and implementing GitOps practices.</p>
+                            <ul>
+                                <li>Created complete isolated work environments for both Development and Production using GitHub.</li>
+                                <li>Deployed a scalable, fault-tolerant AWS infrastructure with Terraform.</li>
+                                <li>Integrated monitoring with Prometheus and Grafana, and log processing with Elasticsearch and Kibana.</li>
+                            </ul>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag"><i class="fab fa-jenkins"></i> Jenkins</span>
+                            <span class="tech-tag"><i class="fab fa-aws"></i> AWS</span>
+                            <span class="tech-tag"><i class="fas fa-code-branch"></i> Terraform</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/keretdodor/netflix-infra" target="_blank">
+                                <i class="fab fa-github"></i> Infrastructure Repository
+                            </a>
+                            <a href="https://github.com/keretdodor/NetflixFrontend" target="_blank">
+                                <i class="fab fa-github"></i> Frontend Repository
+                            </a>
+                            <a href="https://github.com/keretdodor/NetflixMovieCatalog" target="_blank">
+                                <i class="fab fa-github"></i> Backend Repository
+                            </a>
+                        </div>
+                    </div>
+                    <img src="/images/archi/stream.png" alt="Video Streaming Service" class="project-image">
+                </div>
+
+                <!-- Octopus's Disko Project -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Octopus's Disko Image Management</h3>
+                        <div class="project-description">
+                            <p style="margin-bottom: 10px;">Disko is an open source tool, designed to manage and facilitate operations in disconnected (air-gapped) environments. It has three main features: Statistics of Images per Registry, Copy Images Between Registries and Migrate Images in Kubernetes.</p>
+                            <ul>
+                                <li>Transformed Disko's CLI to a Next.js web-based GUI, developed a seamless API with Python.</li>
+                                <li>Implemented CI/CD pipelines using GitHub Actions for both frontend and backend, impacting deployment time.</li>
+                                <li>Integrated Helm to automate the deployment of container images, streamlining the transfer between registries and clusters.</li>
+                            </ul>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag"><i class="fab fa-react"></i> Next.js</span>
+                            <span class="tech-tag"><i class="fas fa-dharmachakra"></i> Kubernetes</span>
+                            <span class="tech-tag"><i class="fas fa-ship"></i> Helm</span>
+                            <span class="tech-tag"><i class="fab fa-github"></i> GitHub Actions</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/dorkeret/disko-web" target="_blank">
+                                <i class="fab fa-github"></i> Frontend Repository
+                            </a>
+                            <a href="https://github.com/dorkeret/disko-back" target="_blank">
+                                <i class="fab fa-github"></i> Backend Repository
+                            </a>
+                        </div>
+                    </div>
+                    <img src="/images/archi/disko.png" alt="Disko Project" class="project-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bootcamps">
+        <div class="container">
+            <h2 class="section-title">Professional Development</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h3>Octopus Computer Solutions, DevOps Intern</h3>
+                    <p>Gained expertise in diverse DevOps tools, methodologies, and best practices. Specialized in designing and implementing automated CI/CD pipelines, utilizing the GitOps framework. Collaborated on a product development aimed at commercial release.</p>
+                    <p>Jun 2024 - Sep 2024 / 3 Months</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h3>Exit Zero Academy, DevOps Bootcamp</h3>
+                    <p>Participated in a DevOps bootcamp led by an ex-Microsoft DevOps engineer, focusing on CI/CD pipelines, Kubernetes, Terraform, Docker, and AWS. Gained experience in monitoring with Prometheus, Grafana and ElasticSearch.</p>
+                    <p>Mar 2024 - Jun 2024 / 3 months</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="resume-section">
+        <div class="container">
+            <h2 class="section-title">Resume</h2>
+            
+            <div class="resume-preview-container">
+                <input type="checkbox" id="resume-preview-toggle" class="resume-preview-toggle">
+                <label for="resume-preview-toggle" class="resume-preview-toggle-label">
+                    Preview Resume
+                </label>
+
+                <div class="resume-preview">
+                    <div class="resume-preview-content">
+                        <img src="/images/resume.png" alt="Resume Preview" />
+                        <p>Want to know more about me?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="download-container">
+                <p>Download my full resume to learn more about my experience and qualifications.</p>
+                <a href="0dorkeretscv.pdf" download class="download-btn">
+                    <i class="fas fa-download"></i>
+                    Download Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="technologies">
+        <div class="container">
+            <h2 class="section-title">Technologies & Tools</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <i class="fab fa-docker"></i>
+                    <span>Docker</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-dharmachakra"></i>
+                    <span>Kubernetes</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-aws"></i>
+                    <span>AWS</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-code-branch"></i>
+                    <span>Terraform</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-jenkins"></i>
+                    <span>Jenkins</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-terminal"></i>
+                    <span>Bash</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-linux"></i>
+                    <span>Linux</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-google"></i>
+                    <span>GCP</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-java"></i>
+                    <span>Java</span>
+                </div>
+                <div class="tech-item">
+                    <img src="images/logos/argocd.svg" alt="ArgoCD Logo" class="argo-icon">
+                    <span>ArgoCD</span>
+                </div>
+                <div class="tech-item">
+                    <img src="images/logos/prometheus.svg" alt="ArgoCD Logo" class="argo-icon">
+                    <span>Prometheus</span>
+                </div>
+                <div class="tech-item">
+                    <img src="images/logos/grafana.svg" alt="ArgoCD Logo" class="argo-icon">
+                    <span>Grafana</span>
+                </div>
+                <div class="tech-item">
+                    <img src="images/logos/elasticsearch.svg" alt="ArgoCD Logo" class="argo-icon">
+                    <span>ElasticSearch</span>
+                </div>
+            </div> 
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Dor Keret. All Rights Reserved.</p>
+            <div class="social-links mt-4">
+                <a href="https://github.com/keretdodor" class="btn-social btn-outline">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/dorkeret" class="btn-social btn-outline">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:keret.dor@gmail.com" class="btn-social btn-outline">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
 </html>
