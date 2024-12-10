@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { 
   FaDocker, FaAws, FaGithub, FaJenkins, 
   FaPython, FaTerminal, FaLinux, FaGoogle, FaJava 
-} from 'react-icons/fa';
-import { SiKubernetes, SiTerraform, SiArgocd, SiPrometheus, SiGrafana, SiElasticsearch } from 'react-icons/si';
+  } from 'react-icons/fa';
+import { SiKubernetes, SiTerraform, SiArgo, SiPrometheus, SiGrafana, SiElasticsearch } from 'react-icons/si';
 
 const technologies = [
   { icon: <FaDocker />, name: 'Docker' },
@@ -18,7 +18,7 @@ const technologies = [
   { icon: <FaLinux />, name: 'Linux' },
   { icon: <FaGoogle />, name: 'GCP' },
   { icon: <FaJava />, name: 'Java' },
-  { icon: <SiArgocd />, name: 'ArgoCD' },
+  { icon: <SiArgo />, name: 'ArgoCD' },
   { icon: <SiPrometheus />, name: 'Prometheus' },
   { icon: <SiGrafana />, name: 'Grafana' },
   { icon: <SiElasticsearch />, name: 'ElasticSearch' }
