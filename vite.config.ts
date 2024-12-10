@@ -2,8 +2,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// Replace 'your-repo-name' with your GitHub repository name
+// Set the base path for GitHub Pages deployment
 export default defineConfig({
-  base: '/your-repo-name/', // Change 'your-repo-name' to your actual repository name
+  base: '/', // GitHub Pages serves files at the root for harpazofek.github.io
   plugins: [react()],
 });
