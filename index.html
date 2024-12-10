@@ -7,70 +7,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-
-<style>
-    .dark-mode-toggle {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background-color: var(--navy-blue);
-        color: var(--white);
-        border: none;
-        border-radius: 5px;
-        padding: 10px 20px;
-        cursor: pointer;
-        font-size: 1rem;
-        transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    
-    .dark-mode-toggle:hover {
-        background-color: var(--yellow);
-        color: var(--navy-blue);
-    }
-    
-    body.dark-mode {
-        background-color: var(--navy-blue);
-        color: var(--white);
-    }
-    
-    body.dark-mode header,
-    body.dark-mode footer {
-        background-color: var(--black);
-        color: var(--white);
-    }
-    
-    body.dark-mode .btn-social {
-        color: var(--white);
-        border-color: var(--yellow);
-    }
-    
-    body.dark-mode .btn-social:hover {
-        background-color: var(--white);
-        color: var(--black);
-    }
-    </style>
-    <script>
-    function toggleDarkMode() {
-        const body = document.body;
-        body.classList.toggle('dark-mode');
-        const isDarkMode = body.classList.contains('dark-mode');
-        localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
-    }
-    
-    // Apply dark mode preference on page load
-    window.onload = () => {
-        const darkModePreference = localStorage.getItem('darkMode');
-        if (darkModePreference === 'enabled') {
-            document.body.classList.add('dark-mode');
-        }
-    };
-    </script>
-    
-    </head>
-    <body>
-    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+</head>
+<body>
     <header>
-    
         <div class="container">
             <h1>Ofek Harpaz</h1>
             <span class="skills">DevOps Engineer</span>
