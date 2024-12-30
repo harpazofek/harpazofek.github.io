@@ -58,7 +58,7 @@ body {
     font-size: 4.5rem;
     font-weight: 800;
     color: #ffffff;
-    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     margin-bottom: 1rem;
     animation: glow 3s ease-in-out infinite;
 }
@@ -146,51 +146,143 @@ body {
     margin: 0 auto;
     text-align: center;
     line-height: 1.8;
+    font-size: 1.2rem;
+    color: var(--text-light);
 }
 
 .about-content p {
     margin-bottom: 1.5rem;
-    color: var(--text);
-    font-size: 1.1rem;
+    opacity: 0.9;
+    transition: all 0.3s ease;
 }
 
-/* Tech Stack */
+/* Highlighted Text */
+.highlight {
+    font-weight: 600;
+    color: var(--primary-light);
+}
+
+.highlight-text {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+/* Add Subtle Animation */
+.about-content p {
+    transform: translateY(10px);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.about-content p:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.about-content p:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.about-content p:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Fade-In Animation */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Tech Stack Grid */
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 2rem;
-    padding: 2rem;
+    margin-top: 3rem;
 }
 
 .tech-item {
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 16px;
-    padding: 2rem;
-    text-align: center;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: var(--light);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .tech-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    border-color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .tech-item i {
     font-size: 2.5rem;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    margin-bottom: 1rem;
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.tech-item:hover i {
+    color: var(--secondary);
+    transform: scale(1.1);
 }
 
 .tech-item span {
     font-size: 1rem;
     font-weight: 500;
     color: var(--text);
+}
+
+/* Resume Section */
+.resume-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.download-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.download-button:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.download-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+    transform: translateY(-2px);
+}
+
+.download-button i {
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+}
+
+.download-button:hover i {
+    transform: scale(1.1);
 }
 
 /* Footer */
