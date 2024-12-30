@@ -157,35 +157,40 @@ body {
 /* Tech Stack */
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 2rem;
-    padding: 2rem 0;
-}
-
-.tech-card {
-    background: var(--light);
     padding: 2rem;
-    border-radius: 1rem;
+}
+
+.tech-item {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 2rem;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.tech-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+.tech-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border-color: var(--primary);
 }
 
-.tech-card i {
+.tech-item i {
     font-size: 2.5rem;
-    color: var(--primary);
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     margin-bottom: 1rem;
 }
 
-.tech-card span {
+.tech-item span {
     font-size: 1rem;
-    color: var(--text);
     font-weight: 500;
+    color: var(--text);
 }
 
 /* Footer */
